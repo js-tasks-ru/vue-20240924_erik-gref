@@ -4,6 +4,11 @@ export default defineComponent({
   name: 'CounterApp',
 
   setup() {
+    // Описал решение так, ибо вызов рефа есть явная реактивност
+    // Можно было написать гораздо проще
+    // @click.prevent="count--"
+    // @click.prevent="count++"
+    // и в setup -> return { count: 0 }
     let count = ref(0)
     const plus = () => {
       count.value++
