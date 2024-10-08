@@ -71,6 +71,7 @@ describe('WeatherApp', () => {
 
   it('должно рендерить карточки с погодой с классом .weather-card--night, если локальное время не между рассветом и закатом', () => {
     expect(cards).toHaveLength(weatherData.length)
+    console.log(cards)
     for (let i = 0; i < cards.length; i++) {
       const card = cards[i]
       if (i < 2) {
